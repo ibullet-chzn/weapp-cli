@@ -14,6 +14,7 @@
 ## 内置lib包
 
 + request（/lib/request 基于业务封装，可自行修改）
+  指纹信息涉及加密 乱写了一个 使用时需要注意
 + router
 + redux
 
