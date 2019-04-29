@@ -1,0 +1,5 @@
+const Unit = ['是', '否'];
+
+const format = type => Unit[type] || '';
+
+module.exports.format = format;

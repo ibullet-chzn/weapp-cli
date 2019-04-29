@@ -1,0 +1,20 @@
+/*
+ 自定义组件内禁止使用标签名选择器，会影响到全局的样式
+*/
+.button {
+  border-radius: 0;
+}
+
+.button.clear {
+  margin: 0;
+  padding: 0;
+}
+
+.button::after {
+  border: none;
+}
+
+.view,
+.scroll-view {
+  box-sizing: border-box;
+}

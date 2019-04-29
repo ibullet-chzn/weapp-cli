@@ -1,0 +1,21 @@
+<view class="view sf-design-mini__action-sheet" wx:if="{{show}}" catchtouchmove="stopPageScroll">
+	<view class="view action-sheet__mask" animation="{{animationMask}}" bindtap="cancelEvent"></view>
+	<view class="view action-sheet__operating-area" animation="{{animationOperatingArea}}"
+	style="height: {{ operatingAreaHeight + 'rpx'}};bottom: {{ -operatingAreaHeight + 'rpx'}};">
+		<!--	操作区：取消 标题 确认 至少有一项才展示	-->
+		<view class="view action-sheet__operating" wx:if="{{cancel||title||confirm}}">
+			<view class="view action-sheet__icon-box">
+				<view class="view action-sheet__icon" wx:if="{{cancel}}" bindtap="cancelEvent">
+					<image class="action-sheet__icon-image" src="../assets/icon-cancel.png"></image>
+				</view>
+			</view>
+			<view class="view action-sheet__title">{{title}}</view>
+			<view class="view action-sheet__icon-box">
+				<view class="view action-sheet__icon" wx:if="{{confirm}}" bindtap="confirmEvent">
+					<image class="view action-sheet__icon-image" src="../assets/icon-confirm.png"></image>
+				</view>
+			</view>
+		</view>
+		<slot name="wrapper"></slot>
+	</view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "name": "weapp-cli",
+  "version": "0.0.1",
+  "description": "wechat miniprogram cli",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env ENV=development babel-node ./bin/wea"
+  },
+  "bin": {
+    "wea-cli": "bin/wea"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibullet-chzn/weapp-cli.git"
+  },
+  "keywords": [
+    "wechat",
+    "miniprogram",
+    "cli"
+  ],
+  "author": "ibullet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibullet-chzn/weapp-cli/issues"
+  },
+  "homepage": "https://github.com/ibullet-chzn/weapp-cli#readme",
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}

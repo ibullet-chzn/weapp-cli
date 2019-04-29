@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/index"
+  ],
+  "subpackages": [
+    {
+      "root": "packages/eggs",
+      "name": "eggs",
+      "pages": [
+        "pages/advancedPage/advancedPage"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f8f8",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxd9d07d7f604dd2d0",
+    "wx0bca86659c91b215"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于快速定位寄收件地址"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

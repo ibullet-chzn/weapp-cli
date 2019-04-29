@@ -1,0 +1,50 @@
+{
+  "extends": ["airbnb-base"],
+  "globals": {
+    "wx": true,
+    "App": true,
+    "Page": true,
+    "getApp": true,
+    "Component": true,
+    "getCurrentPages": true,
+    "getRegExp": true,
+    "getDate": true,
+    "Behavior": true
+  },
+  "overrides": [
+    {
+      "files": ["config/**/*", "scripts/**/*"],
+      "rules": {
+        "no-console": "off",
+        "linebreak-style": [
+          0,
+          "error",
+          "windows"
+        ]
+      }
+    },
+    {
+      "files": ["src/**/*.js", "src/**/*.wxs"],
+      "rules": {
+        "camelcase": "off",
+        "no-underscore-dangle": "off",
+        "no-restricted-globals": ["off", "Number"],
+        "import/no-unresolved": "off",
+        "linebreak-style": [
+          0,
+          "error",
+          "windows"
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "env": {
+    "node": true
+  }
+}
+

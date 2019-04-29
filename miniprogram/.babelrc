@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "modules": "commonjs" }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "extensions": [".js", ".json"],
+      "root": ["."],
+      "alias": {
+        "@": "./src"
+      }
+    }],
+    ["transform-node-env-inline"]
+  ],
+  "comments": false
+}

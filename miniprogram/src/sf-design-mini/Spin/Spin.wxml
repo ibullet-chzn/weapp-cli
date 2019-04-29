@@ -1,0 +1,20 @@
+<view class="view sf-design-mini__spin"
+      style="width: {{width<200? 'auto' : width+'rpx'}}; height: {{height<200? 'auto' : height+'rpx'}};">
+	<!-- 默认宽度和高度，取决于它包裹内容的宽度和高度	-->
+	<view wx:if="{{visible&&mask}}" class="sf-design-mini__mask"></view>
+	<view wx:if="{{visible}}" class="sf-design-mini__box {{ top !== -1 && 'flex-start' }}" style="padding-top: {{top+'rpx'}}">
+		<view class="sf-design-mini__animation">
+			<view class="sf-design-mini__item"></view>
+			<view class="sf-design-mini__item delay2"></view>
+			<view class="sf-design-mini__item delay4"></view>
+		</view>
+		<view wx:if="{{tip}}" class="sf-design-mini__tip">{{tip}}</view>
+	</view>
+	<!--
+	wx:if 会把元素移除 hidden 会让高度获取不到 --- 均无法正常获取高度
+	所以此处选择透明度为0的方式，让子内容不可见
+	-->
+	<view class="{{visible&&'sf-design-mini__disappear'}}">
+		<slot name="wrapper"></slot>
+	</view>
+</view>

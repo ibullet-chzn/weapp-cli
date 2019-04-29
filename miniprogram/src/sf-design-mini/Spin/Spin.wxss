@@ -1,0 +1,76 @@
+@import '../reset.wxss';
+
+.sf-design-mini__spin {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.sf-design-mini__mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+}
+
+.sf-design-mini__box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1109;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sf-design-mini__box.flex-start {
+  justify-content: flex-start;
+}
+
+.sf-design-mini__animation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.sf-design-mini__item {
+  width: 14rpx;
+  height: 14rpx;
+  margin-right: 14rpx;
+  border-radius: 50%;
+  background-color: #DDD;
+  animation: loading-item 0.6s infinite linear alternate;
+}
+
+.sf-design-mini__item.delay2 {
+  animation-delay: 0.2s;
+}
+
+.sf-design-mini__item.delay4 {
+  animation-delay: 0.4s;
+}
+
+.sf-design-mini__item:last-child {
+  margin-right: 0;
+}
+
+@keyframes loading-item {
+  from {background: #808492;}
+  to {background: #DDD;}
+}
+
+.sf-design-mini__tip {
+  margin-top: 40rpx;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  color: #A8B1BD;
+}
+
+.sf-design-mini__disappear {
+  opacity: 0;
+}

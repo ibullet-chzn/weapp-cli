@@ -1,0 +1,9 @@
+<view class="view sf-design-mini__modal" wx:if="{{show}}" catchtouchmove="stopPageScroll">
+	<view class="view modal__mask" animation="{{animationMask}}"></view>
+	<view class="view modal__operating-area" animation="{{animationOperatingArea}}">
+		<slot name="wrapper"></slot>
+		<view class="modal__cancel" bindtap="cancelEvent">
+			<view class="modal__cancel-icon"></view>
+		</view>
+	</view>
+</view>

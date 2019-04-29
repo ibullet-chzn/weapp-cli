@@ -1,0 +1,52 @@
+.sf-design-mini__action-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+}
+
+.action-sheet__mask {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+
+.action-sheet__operating-area {
+  width: 100%;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+}
+
+.action-sheet__operating {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 110rpx;
+}
+
+.action-sheet__title {
+  font-size: 32rpx;
+  color: #333A4E;
+}
+
+.action-sheet__icon-box {
+  width: 90rpx;
+  height: 110rpx;
+}
+
+.action-sheet__icon {
+  width: 90rpx;
+  height: 110rpx;
+  padding: 30rpx 20rpx;
+}
+
+.action-sheet__icon-image {
+  width: 50rpx;
+  height: 50rpx;
+}
