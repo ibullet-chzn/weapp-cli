@@ -33,6 +33,11 @@
     "mkdirp": "^0.5.1",
     "node-sass": "^4.12.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,wxs}": [
       "eslint --fix",
