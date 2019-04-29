@@ -1,8 +1,4 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
 import { catchError } from './authorize';
-
-const regeneratorRuntime = require('../../lib/babel-runtime/regenerator/index');
 
 const getLocation = async (type = 'gcj02') => new Promise((resolve, reject) => {
   wx.getLocation({
@@ -16,4 +12,5 @@ const getLocation = async (type = 'gcj02') => new Promise((resolve, reject) => {
   });
 });
 
+// eslint-disable-next-line
 export { getLocation };

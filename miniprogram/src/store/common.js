@@ -1,12 +1,8 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
 import isVoidObject from '../utils/isVoidObject';
 import encrypt from '../utils/encrypt';
 
 import * as api from '../api/index';
 import * as storage from '../lib/storage';
-
-const regeneratorRuntime = require('../lib/babel-runtime/regenerator/index');
 
 const common = {
   state: {

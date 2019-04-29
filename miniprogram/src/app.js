@@ -1,8 +1,7 @@
+import './lib/polyfill';
+
 import { Provider } from './lib/wechat-weapp-redux.min';
 import store from './store/index';
-
-// 每次发版需要更新版本号
-const VERSION = '1.0.0';
 
 // 引入 错误监控 SDK 文件
 const Monitor = require('./lib/monitor.wxa.js');

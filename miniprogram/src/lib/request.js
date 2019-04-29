@@ -1,7 +1,3 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
-const regeneratorRuntime = require('../lib/babel-runtime/regenerator/index');
-
 /* 业务级 request 封装
  * 依赖 storage
  *

@@ -1,7 +1,3 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
-const regeneratorRuntime = require('../../lib/babel-runtime/regenerator/index');
-
 const getClipboardData = async () => new Promise((resolve, reject) => {
   wx.getClipboardData({
     success(res) {

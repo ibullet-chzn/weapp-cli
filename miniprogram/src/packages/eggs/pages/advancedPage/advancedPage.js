@@ -1,9 +1,5 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
 import computedBehavior from '../../../../lib/computed';
 import propertiesBehavior from '../../../../lib/properties';
-
-const regeneratorRuntime = require('../../../../lib/babel-runtime/regenerator/index');
 
 Component({
   behaviors: [computedBehavior, propertiesBehavior],

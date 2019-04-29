@@ -1,7 +1,3 @@
-// 兼容 async await 写法
-// eslint-disable-next-line
-const regeneratorRuntime = require('../../lib/babel-runtime/regenerator/index');
-
 const scopeList = {
   userInfo: { apiName: ['getUserInfo'], authMsg: '需要使用你的用户信息' },
   userLocation: { apiName: ['getLocation', 'chooseLocation'], authMsg: '需要获取你的地理位置' },
