@@ -1,3 +1,7 @@
+// 兼容 async await 写法
+// eslint-disable-next-line
+const regeneratorRuntime = require('../lib/babel-runtime/regenerator/index');
+
 /* 业务级 request 封装
  * 依赖 storage
  *
@@ -105,7 +109,10 @@ const request = config => {
         api
           .request({
             ...options,
-            url: `${globalData.host}${options.url}`,
+            url:
+              options.url.substr(0, 7).toLowerCase() === 'http://'
+                ? options.url
+                : `${globalData.host}${options.url}`,
             header: {
               ...defaultHeader,
               [globalData.sessionHeaderKey]: '',
@@ -193,14 +200,14 @@ const use = (object, levelLimit) => {
   Object.keys(object).map(index => {
     switch (typeof object[index]) {
       case 'function':
-        // eslint-disable-next-line
-        const config = object[index]();
         if (!levelLimit) {
-          request.requestApi[index] = () => {
+          request.requestApi[index] = params => {
+            const config = object[index](params);
             return request(config);
           };
         } else {
-          request.requestApi[levelLimit][index] = () => {
+          request.requestApi[levelLimit][index] = params => {
+            const config = object[index](params);
             return request(config);
           };
         }
