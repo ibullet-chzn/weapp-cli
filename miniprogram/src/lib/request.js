@@ -22,7 +22,7 @@ const regeneratorRuntime = require('../lib/babel-runtime/regenerator/index');
 import * as api from '../api/index';
 import * as storage from './storage';
 import Router from '../router/index';
-import store from '../store/store';
+import Store from '../store/store';
 
 let globalData = {
   host: '',
@@ -103,7 +103,7 @@ const request = config => {
       const post = async () => {
         // 如果需要指纹 -> 获取指纹信息
         if (fingerprint) {
-          const fingerprintInfo = await store.$R_getFingerprint();
+          const fingerprintInfo = await Store.all().$R_getFingerprint();
           options.params = { ...options.params, ...fingerprintInfo };
         }
         api
